@@ -17,14 +17,15 @@ Count Assigned: Maricopa County, Arizona, United States
 
 The data for this project is extracted has different aspects and way of collection. One source is CDC for county specific information, other John Hopkins with confirmed cases data shared on Kaggle and other is New York Times Survey data.
 
-#### Dataset Source and License
- - [Dinosaur articles](https://docs.google.com/spreadsheets/d/1zfBNKsuWOFVFTOGK8qnTr2DmHkYK4mAACBKk1sHLt_k/edit?usp=sharing)
- - Creative Commons Attribution-ShareAlike License 3.0[https://en.wikipedia.org/wiki/Wikipedia:Copyrights#:~:text=Creative%20Commons%20Attribution%2DShareAlike%20License%203.0]  
+#### Dataset Sources
+- The RAW_us_confirmed_cases.csv file from the Kaggle repository of John Hopkins University COVID-19 data. This data is updated daily and recent version is used
+- The CDC dataset of masking mandates by county. Note that the CDC stopped collecting this policy information in September 2021.
+- The New York Times mask compliance survey data.  
 
 
 ## Issues and Special Considerations
 
-The code has been accustomed to handle any exceptions occurring with regards to data manipulation operations. Also, if the URL or article titles do not exist, the code wouldn't break and is entirely reproducible. As of now, everything just works fine and we have all the relevant information
+
 
 ## Repository Structure
 Here are the main folders in the github data-512-project-common-analysis repository:
@@ -43,5 +44,11 @@ Here are the main folders in the github data-512-project-common-analysis reposit
 #### Rate of New Covid Cases with the Mask Policies in Maricopa County, AZ
 ![Rate of New Covid Cases with the Mask Policies in Maricopa, AZ](part1_visualization.png) 
 
+1. We see the first change point around 2020-06, which was the first peak of the pandemic, before this even if the masking policies were implemented, people were probably not very serious about it, hence strictly wearing mask policy might not have worked. But then over time masks seemed to work. (Some evidence of masking impacting cases over the longer progression)
+2. At the second set of change points, we see that when the cases were declining, the CDC changed the guidelines to less strict policy and the cases continued to decline (No real evidence of mask policy change impact on cases)
+3. At the 5th change point (2021-08), we see the mask policy was made less strict and almost a month later the cases started to rise. (Noticeable impact of masks onto the cases)
+4. At the next change point, we see that vaccines were available, and people might have reduced wearing masks which led to a rise in cases again and then the next changes would be more of due to vaccines and herd immunity over masks.
+
+Overall, connecting the dots backwards, we could see some impact of masks on infection rates but not always as we ignore the subjective/qualitative aspects of the broader problem (vaccinations, herd immunity, recovery rates, hospitalizations)
     
 ### Languages used: Python
